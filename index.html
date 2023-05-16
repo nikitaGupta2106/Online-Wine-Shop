@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wine Shop | HOME</title>
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=PT Mono'>
-    <link rel="stylesheet" href="./CSS/index.css">
-</head>
-<body id="body">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=PT Mono" />
+    <link rel="stylesheet" href="./CSS/index.css" />
+  </head>
+  <body id="body">
     <h1 class="text" id="head-title">Wines from the best vineyards</h1>
-    <div></div>
-</body>
+    <!-- Product Sliding Start -->
+    <center>
+      <!-- Image slider start -->
+      <div class="slider">
+        <div class="imgs_slides">
+          <!-- Radio buttons start -->
+          <input type="radio" name="radio-btn" id="radio1" />
+
+          <input type="radio" name="radio-btn" id="radio2" />
+
+          <input type="radio" name="radio-btn" id="radio3" />
+
+          <!-- Radio buttons end -->
+          <!-- Embedding  images start -->
+          <div class="first slide">
+            <img src="./Assets/1.jpg" />
+          </div>
+          <div class="slide">
+            <img src="./Assets/2 (1).jpg" />
+          </div>
+          <div class="slide">
+            <img src="./Assets/3.jpg" />
+          </div>
+          <!-- Embedding images end -->
+        </div>
+
+        <!-- Navigation start -->
+        <div class="navigation">
+          <label for="radio1" class="navigation-btn"> </label>
+          <label for="radio2" class="navigation-btn"> </label>
+          <label for="radio3" class="navigation-btn"> </label>
+        </div>
+        <!-- Navigation end -->
+      </div>
+      <!-- Image slider end -->
+    </center>
+    <!-- Product Sliding End -->
+    
+    <!-- Different Wines Start -->
+    <div id="items">
+      <h1 class="text">What would you like?</h1>
+      <div id="wine-category">
+        <div class="wine">
+          <img src="./Assets/white_wine-removebg.png" alt="white wine" />
+          <h3 class="text">White</h3>
+        </div>
+        <div class="wine">
+          <img src="./Assets/red_wine-removebg.png" alt="red wine" />
+          <h3 class="text">Red</h3>
+        </div>
+        <div class="wine">
+          <img src="./Assets/rose_wine-removebg.png" alt="rose wine" />
+          <h3 class="text">Rose</h3>
+        </div>
+        <div class="wine">
+          <img
+            src="./Assets/sparkling_wine-removebg.png"
+            alt="sparkling wine" />
+          <h3 class="text">Sparkling</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Different Wines End -->
+    <script src="./JS/index.js"></script>
+  </body>
 </html>
