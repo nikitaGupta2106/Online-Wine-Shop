@@ -1,0 +1,11 @@
+.text{
+    font-family: 'PT Mono';
+}
+
+#head-title{
+    font-size: 80px;
+}
+
+#body{
+    background-color: #fff8e9;
+}
