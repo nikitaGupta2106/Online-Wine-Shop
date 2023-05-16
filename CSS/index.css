@@ -10,6 +10,7 @@
     background-color: #fff8e9;
 }
 
+/* Slider option start */
 .slider {
     width: 100%;
     height: 500px;
@@ -22,7 +23,6 @@
     height: 500px;
     display: flex;
 }
-
 
 .imgs_slides input {
     display: none;
@@ -73,6 +73,7 @@
 #radio3:checked~.first {
     margin-left: -40%;
 }
+/* Slider option end */
 
 #wine-category{
     display: flex;
@@ -95,4 +96,5 @@
 .wine img{
     width: 100%;
     height: 320px;
+    cursor: pointer;
 }
