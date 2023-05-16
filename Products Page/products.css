@@ -1,0 +1,123 @@
+body {
+    background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+}
+/* -------------------------------------------------------------------------font awesome CSS */
+.fa-solid{
+    font-size:small
+}
+
+/* ----------------------------------------------------------------------------main div CSS-- */
+#container {
+    border: 1px solid black;
+    display: flex;
+    gap: 5%;
+    padding: 25px;
+}
+
+/* -----------------------------------------------------------------------------div 1 CSS--- */
+#div1 {
+    border: 1px solid red;
+    width: 22%;
+    padding: 20px;
+    column-rule-color: black;
+}
+
+.sub-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+.options input[type="checkbox"] {
+    margin-bottom: 10px;
+  }
+.options {
+    display: none;
+    border-bottom: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.sub-filters div+div {
+    font-size: x-large;
+}
+.sub-filters div+div:hover {
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------------div 2 CSS-------- */
+#div2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid blue;
+    width: 78%;
+    padding: 5px;
+}
+
+#div2>div {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.42);
+    padding: 15px;
+}
+
+#div2 img {
+    width: 100%;
+    height: 280px;
+    margin-bottom: -16px;
+}
+
+/* ----------------------------------------------------------------------------JS displaydata CSS */
+
+.card1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.card1 button {
+    border: none;
+    font-size: medium;
+    background-color: #fff8e9;
+}
+.card1 button:hover {
+    cursor: pointer;
+}
+
+.card2 {
+    text-align: center;
+}
+
+.card3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: grey;
+    font-size: smaller;
+    font-weight: 800;
+    margin-top: -25px;
+    margin-bottom: -10px;
+    border-bottom: 1px solid black;
+}
+
+.card4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: -10px;
+    font-size: large;
+}
+
+.card4 button {
+    border: 1px solid #bf0d12;
+    color: #bf0d12;
+    align-items: center;
+    font-size: large;
+    background-color: #fff8e9;
+
+}
+.card4 button:hover {
+    cursor: pointer;
+}
