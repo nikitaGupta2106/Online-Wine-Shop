@@ -1,3 +1,5 @@
+
+
 .text{
     font-family: 'PT Mono';
 }
@@ -18,6 +20,10 @@
     overflow: hidden;
 }
 
+.slider img{
+    width: 100%;
+}
+
 .imgs_slides {
     width: 500%;
     height: 500px;
@@ -35,7 +41,7 @@
 
 .slide img {
     width: 100%;
-    height: 750px;
+    height: 900px;
 }
 
 .navigation {
@@ -47,7 +53,7 @@
 }
 
 .navigation-btn {
-    border: 1px solid white;
+    border: 1.5px solid white;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -75,6 +81,8 @@
 }
 /* Slider option end */
 
+
+/* Different Wines Start */
 #wine-category{
     display: flex;
     text-align: center;
@@ -98,3 +106,33 @@
     height: 320px;
     cursor: pointer;
 }
+/* Different Wines End */
+
+/* Sets and Gifts Start */
+#gifts {
+    display: flex;
+    gap: 20px;
+}
+
+#gifts img{
+    width: 100%;
+    height: 380px;
+}
+
+#sets-gifts-btn{
+    text-align: center;
+}
+
+#sets-gifts-btn button{
+    background: none;
+    padding: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 2px;
+}
+
+.right-arrow{
+    content: "\27F6";
+    font-stretch: extra-expanded;
+}
+/* Sets and Gifts End */
