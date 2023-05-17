@@ -37,6 +37,7 @@ passwordcheckbox.addEventListener("change", function() {
       }
     }
   }
+  
 
   else if (loggedIn) {
     alert("Login successful");
