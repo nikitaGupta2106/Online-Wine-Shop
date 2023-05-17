@@ -126,7 +126,6 @@ let append = () =>{
         appendedDiv.append(rating, mainDiv);
         appendedDiv.setAttribute("class", "appended-items");
         
-        
         main.append(appendedDiv);
     })
 }
