@@ -161,3 +161,34 @@
     transition: 0.5s;
 }
 
+.rating_div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.appended-items{
+    border: 1px solid;
+    border-left: 0;
+    padding: 10px;
+}
+
+.appended-items:first-child{
+    border-left: 1px solid;
+}
+
+.product-code{
+    opacity: 0.5;
+    margin-top: -10px;
+}
+
+.special-items img{
+    width: 100%;
+} 
+
+#options-append{
+    display: flex;
+}
