@@ -122,6 +122,7 @@
 
 #sets-gifts-btn{
     text-align: center;
+    margin-bottom: 15px;
 }
 
 #sets-gifts-btn button{
@@ -191,6 +192,10 @@
 
 #options-append{
     display: flex;
+}
+
+.sets-gifts-btn{
+    margin-top: 20px;
 }
 
 /* Options End */
