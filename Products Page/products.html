@@ -40,11 +40,13 @@
                 <div id="toggleCategory">+</div>
             </div>
             <div id="category-options" class="options">
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Red" /> Red wine<br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=White" /> White wine<br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Rose" /> Rose wine<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Red" /> Red Wine<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=White" /> White Wine<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Rose" /> Rose Wine<br />
                 <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Sparkling" /> Sparkling
-                wine<br />
+                Wine<br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?type=Sets%20and%20Gifts" /> Sets &
+                Gifts<br />
             </div>
 
             <div class="sub-filters">
@@ -83,19 +85,25 @@
             </div>
 
             <div id="country-options" class="options">
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=United%20States"/> United States <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Germany"/> Germany <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=France"/> France <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Italy"/> Italy <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Argentina"/> Argentina <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=New%20Zealand"/> New Zealand <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Spain"/> Spain <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Austria"/> Austria <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=South%20Africa"/> South Africa <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=United%20Kingdom"/> United Kingdom <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Greece"/> Greece <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Chile"/> Chile <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Australia"/> Australia <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=United%20States" /> United
+                States <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Germany" /> Germany <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=France" /> France <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Italy" /> Italy <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Argentina" /> Argentina
+                <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=New%20Zealand" /> New
+                Zealand <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Spain" /> Spain <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Austria" /> Austria <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=South%20Africa" /> South
+                Africa <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=United%20Kingdom" /> United
+                Kingdom <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Greece" /> Greece <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Chile" /> Chile <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?country=Australia" /> Australia
+                <br />
             </div>
             <div class="sub-filters">
                 <div>
@@ -104,16 +112,24 @@
                 <div id="toggleYear">+</div>
             </div>
             <div id="year-options" class="options">
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_lte=2010"/> Before 2010 <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2011&year_lte=2015"/> 2011-2015 <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2016&year_lte=2020"/> 2016-2020 <br />
-                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2020"/> After 2020 <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_lte=2010" /> Before 2010
+                <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2011&year_lte=2015" />
+                2011-2015 <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2016&year_lte=2020" />
+                2016-2020 <br />
+                <input type="checkbox" data-url="https://wine-api.onrender.com/wines?year_gte=2020" /> After 2020 <br />
             </div>
         </div>
 
+        <div id="displayProductsDiv">
+            <div id="sortMainDiv">
+                <button id="lthSort">Sort ↑</button>
+                <button id="htlSort">Sort ↓</button>
+            </div>
+            <div id="div2"></div>
+        </div>
 
-
-        <div id="div2"></div>
         <script type="module" src="products.js"></script>
 </body>
 

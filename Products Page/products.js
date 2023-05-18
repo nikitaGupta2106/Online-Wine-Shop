@@ -23,9 +23,9 @@ function displayData(data) {
     console.log(data.length);
     if (data.length === 0) {
         let div = document.createElement("div");
-        div.setAttribute("class","awesomeDiv")
+        div.setAttribute("class", "awesomeDiv")
         let sorry = document.createElement("h4");
-        sorry.innerText="No products found!!😭"
+        sorry.innerText = "No products found!!😭"
         div.append(sorry)
         divContainer.append(div)
     } else {
@@ -36,8 +36,18 @@ function displayData(data) {
             card1.setAttribute("class", "card1");
             let rating = document.createElement("p");
             rating.innerText = "★ " + wine.rating;
+
+            let isFavorite = alreadyPresent(wine);
+            let heartColor = isFavorite ? 'red' : 'lightgrey';
+
+
             let favBtn = document.createElement("button");
-            favBtn.innerHTML = `<i class="fa-regular fa-heart"></i>`;
+            favBtn.innerHTML = `<i class="fa-solid fa-heart" style="color: ${heartColor}"></i>`;
+
+            favBtn.setAttribute("id", "addToFavBtn")
+            favBtn.addEventListener("click", function () {
+                toggleFav(wine, favBtn);
+            })
             card1.append(rating, favBtn)
 
 
@@ -45,6 +55,10 @@ function displayData(data) {
             card2.setAttribute("class", "card2");
             let img = document.createElement("img");
             img.src = wine.image_url;
+            img.addEventListener("click", () => {
+                localStorage.setItem("details", JSON.stringify(wine));
+                window.location.href = "./Product Details/productDetails.html"
+            })
             let name = document.createElement("h4");
             name.innerText = wine.name;
             card2.append(img, name);
@@ -63,6 +77,10 @@ function displayData(data) {
             price.innerText = "$" + wine.price;
             let addBtn = document.createElement("button");
             addBtn.innerText = "+"
+            addBtn.setAttribute("id", "addToCartBtn");
+            addBtn.addEventListener("click", function () {
+                addToCart(wine);
+            })
             card4.append(price, addBtn);
 
 
@@ -72,7 +90,7 @@ function displayData(data) {
     }
 }
 
-// ---------------------------------------------------Toggling filter "+" and "-" signs and siplaying data
+// ---------------------------------------------------Toggling filter "+" and "-" signs and diplaying data
 const toggleButtons = document.querySelectorAll('.sub-filters > div[id^="toggle"]');
 toggleButtons.forEach(button => {
     button.addEventListener('click', function () {
@@ -84,61 +102,75 @@ toggleButtons.forEach(button => {
 });
 
 
-
-
+// ---------------------------------------------------------------fetching data for selected checkbox..
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-// Add event listener to each checkbox
 checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', () => {
         if (checkbox.checked) {
             const url = checkbox.getAttribute('data-url');
             getData(url);
-        }else{
+        } else {
             main();
         }
     });
 });
+// ------------------------------------------------------------------------------sorting LTH and HTL
+let lth = document.getElementById("lthSort")
+lth.addEventListener("click", () => {
+    let url = `https://wine-api.onrender.com/wines?_sort=price&_order=asc`;
+    getData(url);
+})
 
+let htl = document.getElementById("htlSort")
+htl.addEventListener("click", () => {
+    let url = `https://wine-api.onrender.com/wines?_sort=price&_order=desc`;
+    getData(url);
+})
+// ---------------------------------------------------------------------------------Add To Cart
+var cartProduct = JSON.parse(localStorage.getItem("cart")) || [];
 
+function addToCart(wine) {
+    cartProduct.push(wine);
+    localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
+// ---------------------------------------------------------------------------------Add To Favourites
+var favouriteProduct = JSON.parse(localStorage.getItem("favourites")) || [];
 
-
-
-
-
-
-
-
-
-
-
-
-
-// var priceCheckbox= document.getElementById("price-options");
-// // Get the price options div
-// // const priceOptionsDiv = document.getElementById('price-options');
-
-// // Get all the checkboxes within the div
-// const priceCheckboxes = priceCheckbox.querySelectorAll('input[type="checkbox"]');
-
-// // Add event listener to each checkbox
-// checkboxes.forEach((checkbox) => {
-//   checkbox.addEventListener('change', handleCheckboxChange);
-// });
-
-// // Event handler function for checkbox change event
-// function handleCheckboxChange(event) {
-//   // Check if the checkbox is selected
-//   if (event.target.checked) {
-//     // Get the inner text of the selected checkbox
-//     const selectedPriceRange = event.target.nextSibling.textContent.trim();
-
-//     // Log the selected price range
-//     console.log(selectedPriceRange);
-//   }
-// }
-
-// function handleCheckboxClick(checkbox) {
-//     var label = checkbox.nextElementSibling;
-//     console.log("Hi " + label.innerText);
-// }
+function toggleFav(wine, btn) {
+    if (alreadyPresent(wine)) {
+        removeFav(wine, btn);
+    } else {
+        addToFav(wine, btn);
+    }
+    updateHeartColor(wine, btn);
+}
+//checking if that particular wine is already present in the Local storage
+function alreadyPresent(wine) {
+    if (!wine || typeof wine.id === "undefined") {
+        return false;
+    }
+    return favouriteProduct.some(favWine => favWine.id === wine.id);
+}
+// if its present, removing it from LS.
+function removeFav(wine, btn) {
+    favouriteProduct = favouriteProduct.filter(favWine => favWine.id !== wine.id);
+    localStorage.setItem("favourites", JSON.stringify(favouriteProduct));
+    // updateHeartColor(false, btn);
+}
+//if its not present, adding it to favourites.
+function addToFav(wine, btn) {
+    if (!alreadyPresent(wine)) {
+        favouriteProduct.push(wine);
+        localStorage.setItem("favourites", JSON.stringify(favouriteProduct));
+        // updateHeartColor(true, btn);
+    }
+}
+//updating herat btn color on adding it to favourites.
+function updateHeartColor(wine, btn) {
+    const heartIcon = btn.querySelector("i");
+    if (heartIcon) {
+        let isFavorite = alreadyPresent(wine);
+        let heartColor = isFavorite ? 'red' : 'lightgrey';
+        heartIcon.style.color = heartColor;
+    }
+}
