@@ -196,6 +196,8 @@ let append = () =>{
     let option2 = document.getElementById("option2");
     option2.style.opacity = "1";
     option2.style.textDecoration = "underline";
+    option2.style.textDecorationColor = "#bf0d12";
+    option2.style.textDecorationThickness = "3px";
     option2.style.transition = "0.5s";
 
 
@@ -272,7 +274,6 @@ let append = () =>{
     })
 }
 
-
 let appendGreatDeals = () =>{
     let main = document.getElementById("options-append");
     main.innerHTML = "";
@@ -299,6 +300,8 @@ let appendGreatDeals = () =>{
     let option1 = document.getElementById("option1");
     option1.style.opacity = "1";
     option1.style.textDecoration = "underline";
+    option1.style.textDecorationColor = "#bf0d12";
+    option1.style.textDecorationThickness = "3px";
     option1.style.transition = "0.5s";
 
 
@@ -401,6 +404,8 @@ let appendHighlyRated = () =>{
     let option3 = document.getElementById("option3");
     option3.style.opacity = "1";
     option3.style.textDecoration = "underline";
+    option3.style.textDecorationColor = "#bf0d12";
+    option3.style.textDecorationThickness = "3px";
     option3.style.transition = "0.5s";
 
 
@@ -503,6 +508,8 @@ let appendNewArrival = () =>{
     let option4 = document.getElementById("option4");
     option4.style.opacity = "1";
     option4.style.textDecoration = "underline";
+    option4.style.textDecorationColor = "#bf0d12";
+    option4.style.textDecorationThickness = "3px";
     option4.style.transition = "0.5s";
 
 
@@ -578,3 +585,4 @@ let appendNewArrival = () =>{
         main.append(appendedDiv);
     })
 }
+
