@@ -137,6 +137,7 @@
 #sets-gifts-btn button:hover{
     background-color: black;
     color: #fff8e9;
+    transition: 0.5s;
 }
 
 .right-arrow{
@@ -226,6 +227,87 @@
     cursor: pointer;
     color: #fff8e9;
     background-color: #bf0d12;
+    transition: 0.5s;
 }
 
 /* Options End */
+
+/* Subscription Start */
+
+.main-wine-subscription{
+    display: flex;
+    border: 1px solid;
+    padding: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+#wine-subscription-text-content p{
+    width: 80%;
+}
+
+#image-and-content{
+    display: flex;
+}
+
+#image-and-content img{
+    width: 100%;
+}
+
+#wine-subscription-btn{
+    background: none;
+    padding: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#wine-subscription-btn:hover{
+    background-color: black;
+    color: #fff8e9;
+    transition: 0.5s;
+}
+
+#first-vertical-div{
+    color: #bf0d12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    border: 1px solid rgb(67, 67, 67);
+    border-top: 0;
+    border-bottom: 0;
+    cursor: pointer;
+}
+
+#second-vertical-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    border: 1px solid rgb(67, 67, 67);
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    cursor: pointer;
+}
+
+#third-vertical-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
