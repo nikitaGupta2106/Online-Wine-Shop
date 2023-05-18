@@ -86,7 +86,7 @@ const greatDealsArr = [
 
 const highlyRatedArr = [
     {
-        rating: "★4.1",
+        rating: "★4.8",
         favorite_div: `<i class="fa-solid fa-scale-unbalanced"></i> <i class="fa-regular fa-heart"></i>`,
         productCode: "Product code: 10509",
         image: "./Assets/Highly_rated_1-removebg-preview.png",
@@ -96,7 +96,7 @@ const highlyRatedArr = [
         price: "$99.99",
     }, 
     {
-        rating: "★4.4",
+        rating: "★4.8",
         favorite_div: `<i class="fa-solid fa-scale-unbalanced"></i> <i class="fa-regular fa-heart"></i>`,
         productCode: "Product code: 10510",
         image: "./Assets/Highly_rated_2-removebg-preview.png",
@@ -241,7 +241,7 @@ let append = () =>{
         rating.setAttribute("class", "rating");
 
         let rating_div = document.createElement("div");
-        rating_div.setAttribute("class", "rating_div");
+        rating_div.setAttribute("class", "rating_div text");
 
         let p = document.createElement("p");
         p.textContent = elem.rating;
@@ -266,8 +266,46 @@ let append = () =>{
         div.append(img);
         mainDiv.appendChild(div);
 
+        let title = document.createElement("p");
+        title.textContent = elem.title;
+        title.setAttribute("class", "text");
+        title.style.marginTop = "-15px";
+
+        let countryDiv = document.createElement("div");
+        countryDiv.setAttribute("class", "country-div");
+        let country = document.createElement("div");
+        let countryName = document.createElement("p");
+        countryName.textContent = elem.country;
+        countryName.setAttribute("class", "text");
+        country.appendChild(countryName);
+
+        let type = document.createElement("div");
+        let typeName = document.createElement("p");
+        typeName.textContent = elem.type;
+        typeName.setAttribute("class", "text");
+        type.appendChild(typeName);
+
+        countryDiv.append(country, type);
+
+        let hr = document.createElement("hr");
+
+        let priceDiv = document.createElement("div");
+        priceDiv.setAttribute("class", "price-div");
+        let price = document.createElement("div");
+        let priceH3 = document.createElement("h3");
+        priceH3.textContent = elem.price;
+        price.appendChild(priceH3);
+
+        let priceDivBtn = document.createElement("div");
+        let priceDivButton = document.createElement("button");
+        priceDivButton.setAttribute("class", "price-div-button");
+        priceDivButton.innerHTML = `<i class="fa-solid fa-plus"></i>`;
+        priceDivBtn.appendChild(priceDivButton);
+
+        priceDiv.append(price, priceDivBtn);
+
         let appendedDiv = document.createElement("div");
-        appendedDiv.append(rating, mainDiv);
+        appendedDiv.append(rating, mainDiv, title, countryDiv, hr, priceDiv);
         appendedDiv.setAttribute("class", "appended-items");
         
         main.append(appendedDiv);
@@ -345,7 +383,7 @@ let appendGreatDeals = () =>{
         rating.setAttribute("class", "rating");
 
         let rating_div = document.createElement("div");
-        rating_div.setAttribute("class", "rating_div");
+        rating_div.setAttribute("class", "rating_div text");
 
         let p = document.createElement("p");
         p.textContent = elem.rating;
@@ -370,8 +408,46 @@ let appendGreatDeals = () =>{
         div.append(img);
         mainDiv.appendChild(div);
 
+        let title = document.createElement("p");
+        title.textContent = elem.title;
+        title.setAttribute("class", "text");
+        title.style.marginTop = "-15px";
+
+        let countryDiv = document.createElement("div");
+        countryDiv.setAttribute("class", "country-div");
+        let country = document.createElement("div");
+        let countryName = document.createElement("p");
+        countryName.textContent = elem.country;
+        countryName.setAttribute("class", "text");
+        country.appendChild(countryName);
+
+        let type = document.createElement("div");
+        let typeName = document.createElement("p");
+        typeName.textContent = elem.type;
+        typeName.setAttribute("class", "text");
+        type.appendChild(typeName);
+
+        countryDiv.append(country, type);
+
+        let hr = document.createElement("hr");
+
+        let priceDiv = document.createElement("div");
+        priceDiv.setAttribute("class", "price-div");
+        let price = document.createElement("div");
+        let priceH3 = document.createElement("h3");
+        priceH3.textContent = elem.price;
+        price.appendChild(priceH3);
+
+        let priceDivBtn = document.createElement("div");
+        let priceDivButton = document.createElement("button");
+        priceDivButton.setAttribute("class", "price-div-button");
+        priceDivButton.innerHTML = `<i class="fa-solid fa-plus"></i>`;
+        priceDivBtn.appendChild(priceDivButton);
+
+        priceDiv.append(price, priceDivBtn);
+
         let appendedDiv = document.createElement("div");
-        appendedDiv.append(rating, mainDiv);
+        appendedDiv.append(rating, mainDiv, title, countryDiv, hr, priceDiv);
         appendedDiv.setAttribute("class", "appended-items");
         
         main.append(appendedDiv);
@@ -449,7 +525,7 @@ let appendHighlyRated = () =>{
         rating.setAttribute("class", "rating");
 
         let rating_div = document.createElement("div");
-        rating_div.setAttribute("class", "rating_div");
+        rating_div.setAttribute("class", "rating_div text");
 
         let p = document.createElement("p");
         p.textContent = elem.rating;
@@ -474,8 +550,46 @@ let appendHighlyRated = () =>{
         div.append(img);
         mainDiv.appendChild(div);
 
+        let title = document.createElement("p");
+        title.textContent = elem.title;
+        title.setAttribute("class", "text");
+        title.style.marginTop = "-15px";
+
+        let countryDiv = document.createElement("div");
+        countryDiv.setAttribute("class", "country-div");
+        let country = document.createElement("div");
+        let countryName = document.createElement("p");
+        countryName.textContent = elem.country;
+        countryName.setAttribute("class", "text");
+        country.appendChild(countryName);
+
+        let type = document.createElement("div");
+        let typeName = document.createElement("p");
+        typeName.textContent = elem.type;
+        typeName.setAttribute("class", "text");
+        type.appendChild(typeName);
+
+        countryDiv.append(country, type);
+
+        let hr = document.createElement("hr");
+
+        let priceDiv = document.createElement("div");
+        priceDiv.setAttribute("class", "price-div");
+        let price = document.createElement("div");
+        let priceH3 = document.createElement("h3");
+        priceH3.textContent = elem.price;
+        price.appendChild(priceH3);
+
+        let priceDivBtn = document.createElement("div");
+        let priceDivButton = document.createElement("button");
+        priceDivButton.setAttribute("class", "price-div-button");
+        priceDivButton.innerHTML = `<i class="fa-solid fa-plus"></i>`;
+        priceDivBtn.appendChild(priceDivButton);
+
+        priceDiv.append(price, priceDivBtn);
+
         let appendedDiv = document.createElement("div");
-        appendedDiv.append(rating, mainDiv);
+        appendedDiv.append(rating, mainDiv, title, countryDiv, hr, priceDiv);
         appendedDiv.setAttribute("class", "appended-items");
         
         main.append(appendedDiv);
@@ -553,7 +667,7 @@ let appendNewArrival = () =>{
         rating.setAttribute("class", "rating");
 
         let rating_div = document.createElement("div");
-        rating_div.setAttribute("class", "rating_div");
+        rating_div.setAttribute("class", "rating_div text");
 
         let p = document.createElement("p");
         p.textContent = elem.rating;
@@ -578,8 +692,46 @@ let appendNewArrival = () =>{
         div.append(img);
         mainDiv.appendChild(div);
 
+        let title = document.createElement("p");
+        title.textContent = elem.title;
+        title.setAttribute("class", "text");
+        title.style.marginTop = "-15px";
+
+        let countryDiv = document.createElement("div");
+        countryDiv.setAttribute("class", "country-div");
+        let country = document.createElement("div");
+        let countryName = document.createElement("p");
+        countryName.textContent = elem.country;
+        countryName.setAttribute("class", "text");
+        country.appendChild(countryName);
+
+        let type = document.createElement("div");
+        let typeName = document.createElement("p");
+        typeName.textContent = elem.type;
+        typeName.setAttribute("class", "text");
+        type.appendChild(typeName);
+
+        countryDiv.append(country, type);
+
+        let hr = document.createElement("hr");
+
+        let priceDiv = document.createElement("div");
+        priceDiv.setAttribute("class", "price-div");
+        let price = document.createElement("div");
+        let priceH3 = document.createElement("h3");
+        priceH3.textContent = elem.price;
+        price.appendChild(priceH3);
+
+        let priceDivBtn = document.createElement("div");
+        let priceDivButton = document.createElement("button");
+        priceDivButton.setAttribute("class", "price-div-button");
+        priceDivButton.innerHTML = `<i class="fa-solid fa-plus"></i>`;
+        priceDivBtn.appendChild(priceDivButton);
+
+        priceDiv.append(price, priceDivBtn);
+
         let appendedDiv = document.createElement("div");
-        appendedDiv.append(rating, mainDiv);
+        appendedDiv.append(rating, mainDiv, title, countryDiv, hr, priceDiv);
         appendedDiv.setAttribute("class", "appended-items");
         
         main.append(appendedDiv);
