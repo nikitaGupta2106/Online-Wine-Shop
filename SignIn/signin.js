@@ -39,7 +39,7 @@ passwordcheckbox.addEventListener("change", function() {
   }
   
 
-  else if (loggedIn) {
+   if (loggedIn) {
     alert("Login successful");
   } else {
     alert("Invalid email or password");
