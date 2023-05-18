@@ -737,4 +737,3 @@ let appendNewArrival = () =>{
         main.append(appendedDiv);
     })
 }
-
