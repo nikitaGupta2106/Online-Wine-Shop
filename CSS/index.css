@@ -398,7 +398,7 @@
 }
 
 #insta-header p{
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 #instagram{
@@ -409,6 +409,13 @@
 
 #instagram img{
     width: 100%;
+}
+
+#mine-wine:hover{
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+    text-decoration: underline;
 }
 
 /* Instagram End */
