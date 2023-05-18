@@ -4,6 +4,11 @@
     font-family: 'PT Mono';
 }
 
+.text-nunito{
+    font-family: 'Nunito';
+    opacity: 0.8;
+}
+
 #head-title{
     font-size: 80px;
 }
@@ -232,7 +237,7 @@
 
 /* Options End */
 
-/* Subscription Start */
+/* Wine Subscription Start */
 
 .main-wine-subscription{
     display: flex;
@@ -314,4 +319,16 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     cursor: pointer;
+}
+/* Wine Subscription End  */
+
+/* Blogs and news Start */
+#blogs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.blog-and-news-div img{
+    width: 100%;
 }
