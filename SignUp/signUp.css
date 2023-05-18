@@ -6,6 +6,7 @@
     transition-property: background-color;
     margin: 0%;
     padding: 0%;
+    font-family: 'PT Mono';
  }
  #main{
     min-height: 100vh;

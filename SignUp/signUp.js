@@ -16,6 +16,11 @@ passwordcheckbox.addEventListener("change", function() {
     let email=document.getElementById("email").value;
     let password=document.getElementById("password").value;
 
+    if (email === "" || password === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
     let userinfo={
         username : username,
         email: email,
@@ -23,11 +28,14 @@ passwordcheckbox.addEventListener("change", function() {
     }
     var storedData = localStorage.getItem("userinfo");
     event.preventDefault();
+    
     if (storedData) {
       var existingData = JSON.parse(storedData);
       existingData.push(userinfo);
       localStorage.setItem("userinfo", JSON.stringify(existingData));
-    } else {
+    } 
+    
+    else {
       var newData = [userinfo];
       localStorage.setItem("userinfo", JSON.stringify(newData));
     }
