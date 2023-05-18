@@ -198,4 +198,34 @@
     margin-top: 20px;
 }
 
+.country-div{
+    display: flex;
+    font-size: smaller;
+    justify-content: space-between;
+    margin-top: -15px;
+}
+
+.price-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.price-div-button{
+    background: none;
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    color: #bf0d12;
+    border-color: #bf0d12;
+}
+
+.price-div-button:hover{
+    cursor: pointer;
+    color: #fff8e9;
+    background-color: #bf0d12;
+}
+
 /* Options End */
