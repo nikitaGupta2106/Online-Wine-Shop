@@ -1,4 +1,12 @@
+#header{
+  font-family: 'PT Mono';
+  position: sticky;
+  top: 0;
+}
 
+#ua{
+  opacity: 0.6;
+}
 
 #navbar{
     width: 100%;
@@ -22,22 +30,35 @@
     padding-left: 20px;
     color: black;
    }
-   #lower{
+   .main-header{
     display: flex;
     align-items: center;
+}
+
+
+.header-options-div{
+    width: 40%;
+    display: flex;
     justify-content: space-between;
-    height: 30px;
-    font-family: 'PT Mono';
-   
-   }
-   h2{
-    font-size: 40px;
-   }
-   #content{
-    padding: 5px 15px;
-   }
-   #searchbox{
-    width: 30%;
-    justify-content: right;
-   }
+    margin-left: 20%;
+    margin-right: 15%;
+}
+
+.start-typing-to-search{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.start-typing-to-search input{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 45px;
+  border: none;
+  
+}
+
+.start-typing-to-search input:focus{
+  outline: none;
+}
     

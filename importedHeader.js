@@ -1,4 +1,3 @@
 import navbar from "./header.js";
-
-let navbarDiv = document.getElementById("navbar1");
+let navbarDiv = document.getElementById("header");
 navbarDiv.innerHTML = navbar();
