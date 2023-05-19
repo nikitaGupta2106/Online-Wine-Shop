@@ -1,0 +1,38 @@
+#navbar{
+    width: 100%;
+    padding-top: 0px;
+  }
+   #upper{
+    display:flex;
+    align-items: center;
+    height: 30px;
+    font-family: 'PT Mono';
+   }
+   #symbols{
+    margin-left: 850px;
+    justify-content: space-between;
+    align-items: end;
+   }
+   a{
+    padding-left: 20px;
+    color: black;
+   }
+   #lower{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    font-family: 'PT Mono';
+   
+   }
+   h2{
+    font-size: 40px;
+   }
+   #content{
+    padding: 5px 15px;
+   }
+   #searchbox{
+    width: 30%;
+    justify-content: right;
+   }
+    

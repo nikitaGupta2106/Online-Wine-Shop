@@ -1,0 +1,53 @@
+footer{
+    font-family: 'PT Mono';
+        }
+#main{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'PT Mono';
+}
+#main p{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#main p:hover{
+    opacity: 1;
+}
+#subscribe-to-our-newsletter{
+    font-size: 20px;
+   
+}
+#last{
+    display: flex;
+    font-family: 'PT Mono';
+    width: 100%;
+}
+#Wine{
+    width: 50%;
+}
+#text{
+    
+    align-items:last baseline;
+    float: right;
+    margin-left: 450px;
+    font-size: 10px;
+    margin-top:40px ;
+ }
+
+ #send-mail{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+ }
+ #example{
+    border: none;
+ }
+ #example:focus{
+    outline: none;
+ }
