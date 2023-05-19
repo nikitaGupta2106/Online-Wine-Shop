@@ -1,8 +1,9 @@
+
 // ----------------------------------------------------------------------------------Fetching Data
 main();
 
 function main() {
-    let url = `https://wine-api.onrender.com/wines`;
+    let url = `https://wine-api.onrender.com/wines`
     let data = getData(url);
 }
 async function getData(url) {
@@ -101,7 +102,6 @@ toggleButtons.forEach(button => {
     });
 });
 
-
 // ---------------------------------------------------------------fetching data for selected checkbox..
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach((checkbox) => {
@@ -129,10 +129,25 @@ htl.addEventListener("click", () => {
 // ---------------------------------------------------------------------------------Add To Cart
 var cartProduct = JSON.parse(localStorage.getItem("cart")) || [];
 
+// function addToCart(wine) {
+//     cartProduct.push(wine);
+//     localStorage.setItem("cart", JSON.stringify(cartProduct));
+// }
+
 function addToCart(wine) {
-    cartProduct.push(wine);
-    localStorage.setItem("cart", JSON.stringify(cartProduct));
-}
+    var isWinePresent = cartProduct.some(function(item) {
+      return item.id === wine.id;
+    });
+
+    if (!isWinePresent) {
+        let obj= {...wine, qty:1}
+      cartProduct.push(obj);
+      localStorage.setItem("cart", JSON.stringify(cartProduct));
+      console.log("Wine added to the cart.");
+    } else {
+      alert("This Wine is already present in the cart.");
+    }
+  }
 // ---------------------------------------------------------------------------------Add To Favourites
 var favouriteProduct = JSON.parse(localStorage.getItem("favourites")) || [];
 
@@ -174,3 +189,60 @@ function updateHeartColor(wine, btn) {
         heartIcon.style.color = heartColor;
     }
 }
+
+
+
+// //----------------------------------------------------------------------------------------------pagination
+
+// // -------------------------------------get data length for pagination-------------------------//
+
+// let paginationDiv = document.getElementById("pagination");
+
+// getLength();
+
+// async function getLength() {
+//   try {
+//     let resLength = await fetch(`https://wine-api.onrender.com/wines`);
+//     let dataLength = await resLength.json();
+
+//     let totalPages = Math.ceil(dataLength.length / 9);
+//     paginationPages(totalPages)
+//     console.log(totalPages);
+
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// // ---------------------------pagination function for creating buttons-------------------------//
+
+// function paginationPages(pageNum) {
+//   let buttonsArray = [];
+//   for (var i = 1; i <= pageNum; i++) {
+//     buttonsArray.push(`<button  class="pagination-button" data-page-number="${i}"> ${i} </button>`)
+//   }
+
+//   paginationDiv.innerHTML = buttonsArray.join(" ");
+
+//   const all_buttons = document.querySelectorAll(".pagination-wrapper");
+//   console.log(all_buttons)
+
+//   all_buttons.forEach(function (btn) {
+//     btn.addEventListener("click", handleClick);
+//   });
+//   function handleClick(e) {
+//     console.log(e.target.innerText);
+//     targetPageNo= e.target.innerText
+//     console.log(targetPageNo)
+//     main(pageNo=e.target.innerText);
+//   }
+// }
+
+
+// let filterByQ= document.getElementById("fiterBy");
+// filterByQ.addEventListener("click", ()=>{
+//     let divC = document.getElementById("div2");
+//     let divSubC= document.getElementById("div1")
+//     divC.innerHTML="";
+//     divC.append(divSubC);
+// })

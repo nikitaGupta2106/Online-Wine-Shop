@@ -245,3 +245,10 @@ quickOrderBtn.addEventListener("click", ()=>{
     addToCart(product);
     window.location.href="checkout.html"
 })
+
+// --------------------------------------------------------------------------------view all button
+
+let viewAll= document.getElementById("viewAllBtn");
+viewAll.addEventListener("click", ()=>{
+    window.location.href="../products.html"
+})

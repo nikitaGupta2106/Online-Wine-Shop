@@ -158,6 +158,7 @@ background-color: #fff8e9;
 }
 #mbwSubDiv{
     display: flex;
+    display: none;
     flex-direction: column;
     border-bottom: 1px solid grey;
     
@@ -282,4 +283,96 @@ table{
 
 .card4 button:hover {
     cursor: pointer;
+}
+
+/*  view all button*/
+#view-div{
+    display: flex;
+    justify-content: center;
+    padding-left: 25px;
+    margin-top: 20px;
+}
+#viewAllBtn{
+    background-color: #fff8e9;
+    text-align: center;
+    padding: 7px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+#viewAllBtn:hover{
+  cursor: pointer;
+}
+
+
+
+/* -------------------------------------------------------------------------------------------media queries */
+@media only screen and (min-width: 701px) and (max-width:900px) {
+    #allProdDetails{
+        display: flex;
+        flex-direction: column;
+    }
+    #prodImgDiv {
+        display: flex;
+        width: auto;
+        padding: 0;
+    }
+    #prodDetails {
+        width: 100%;
+    }
+    #prodImgDiv img {
+        width: 100%;
+        height: 400px;
+    }
+
+}
+@media only screen and (max-width:700px) {
+    #allProdDetails{
+        display: flex;
+        flex-direction: column;
+    }
+    #prodImgDiv {
+        display: flex;
+        width: auto;
+        padding: 0;
+    }
+    #prodDetails {
+        width: 100%;
+    }
+    #description {
+        padding-right: 2px;
+        padding-left: 2px;
+       
+    }
+    #paymentDiv button {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    #mbwSubDiv> div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -30px;
+    }
+    #para p {
+        padding-right: 0;
+        margin-bottom: -10px;
+    }
+    #prodImgDiv img {
+        width: 100%;
+        height: 300px;
+    }
+    
+    
+}
+@media only screen and (max-width:600px){
+    #randonProducts{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        padding: 5px;
+    }
+    #prodImgDiv img {
+        width: 100%;
+        height: 200px;
+    }
 }

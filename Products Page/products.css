@@ -7,7 +7,8 @@ body {
 .fa-solid {
     font-size: small;
 }
-.fa-heart{
+
+.fa-heart {
     font-size: large;
 }
 
@@ -79,9 +80,11 @@ body {
     padding-right: 50px;
 
 }
-#sortMainDiv button:hover{
+
+#sortMainDiv button:hover {
     cursor: pointer;
 }
+
 #div2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -124,7 +127,8 @@ body {
 .card2 {
     text-align: center;
 }
-.card2 img:hover{
+
+.card2 img:hover {
     transform: scale(1.1);
 }
 
@@ -161,3 +165,65 @@ body {
 .card4 button:hover {
     cursor: pointer;
 }
+
+/* pagination */
+#pagination {
+    border-radius: 4px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+#pagination button {
+    padding: 15px;
+    background-color: #fff8e9;
+    margin-left: 5px;
+    border: 1px solid grey;
+}
+
+
+/* -------------------------------------------------------------------------------------------media queries */
+@media only screen and (min-width: 701px) and (max-width:900px) {
+    #div2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* margin: auto; */
+    }
+
+}
+@media only screen and (max-width:700px) {
+    #container {
+        gap: 2%;
+        padding: 5px;
+    }
+    #div1{
+        /* display: none; */
+    }
+    #displayProductsDiv {
+        width: 100%;
+    } 
+
+    #div2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto;
+    }
+    .sub-filters div+div {
+        font-size: medium;
+    }
+    .options {
+        font-size: small;
+        letter-spacing: -1.5px;
+    }
+    .fa-solid {
+        font-size: xx-small;
+    }
+    .sub-filters {
+        font-size: 10px;
+    }
+   
+}
+
