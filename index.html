@@ -15,41 +15,29 @@
   <body id="body" onload="appendGreatDeals()">
     <h1 class="text" id="head-title">Wines from the best vineyards</h1>
     <!-- Product Sliding Start -->
-    <center>
-      <!-- Image slider start -->
-      <div class="slider">
-        <div class="imgs_slides">
-          <!-- Radio buttons start -->
-          <input type="radio" name="radio-btn" id="radio1" />
-
-          <input type="radio" name="radio-btn" id="radio2" />
-
-          <input type="radio" name="radio-btn" id="radio3" />
-
-          <!-- Radio buttons end -->
-          <!-- Embedding  images start -->
-          <div class="first slide">
-            <img src="./Assets/1.jpg" />
+    <div class="slider">
+      <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1"/>
+          <input type="radio" name="radio-btn" id="radio2"/>
+          <input type="radio" name="radio-btn" id="radio3"/>
+          
+          <div class="slide" id="MakeItSlide">
+              <img src="./Assets/try 3.jpg" 
+              alt="Wine">
           </div>
+          
           <div class="slide">
-            <img src="./Assets/2 (1).jpg" />
+              <img src="./Assets/try 4.jpg" 
+              alt="Wine">
           </div>
-          <div class="slide">
-            <img src="./Assets/3.jpg" />
-          </div>
-          <!-- Embedding images end -->
-        </div>
 
-        <!-- Navigation start -->
-        <div class="navigation">
-          <label for="radio1" class="navigation-btn"> </label>
-          <label for="radio2" class="navigation-btn"> </label>
-          <label for="radio3" class="navigation-btn"> </label>
-        </div>
-        <!-- Navigation end -->
+          <div class="slide">
+              <img src="./Assets/try 5.jpg" 
+              alt="Wine">
+          </div>
+
       </div>
-      <!-- Image slider end -->
-    </center>
+  </div>
     <!-- Product Sliding End -->
     
     <!-- Different Wines Start -->
@@ -118,10 +106,10 @@
         </div>
   
         <div>
-          <h3  id="option3" class="text" onclick="appendHighlyRated()">Highly rated</h3>
+          <h3 id="option3" class="text" onclick="appendHighlyRated()">Highly rated</h3>
         </div>
   
-        <div >
+        <div>
           <h3 id="option4" class="text" onclick="appendNewArrival()">New arrivals</h3>
         </div>
   
