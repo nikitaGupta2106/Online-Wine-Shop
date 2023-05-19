@@ -1,14 +1,14 @@
 const navbar = () => {
     return ` <div id="navbar">
     <div id="upper">
-    <h7 id="content">UA|EN   356584536</h7>
-    <h3 id ="symbols">
-        <a href="index.html"><i class="fa-regular fa-heart"></i></a>
-        <a href="search.html"><i class="fa-solid fa-scale-unbalanced"></i></a>
-        <a href="index.html"><i class="fa-regular fa-heart"></i></a>
-        <a href="index.html"> <i class="fa-solid fa-bag-shopping"></i></a>
-    </h3> 
-</div>
+    <p id="content">UA|EN   356584536</p>
+    <div id ="symbols">
+        <a class="logos" href="index.html"><i class="fa-regular fa-user"></i></i></a>
+        <a class="logos" href="search.html"><i class="fa-solid fa-scale-unbalanced"></i></a>
+        <a class="logos" href="index.html"><i class="fa-regular fa-heart"></i></a>
+        <a class="logos" href="index.html"> <i class="fa-solid fa-bag-shopping"></i></a>
+    </div> 
+  </div>
 <hr>
 <div id="lower">
 <h2>Mine Wine</h2>
