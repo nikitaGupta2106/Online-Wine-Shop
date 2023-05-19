@@ -36,12 +36,10 @@ passwordcheckbox.addEventListener("change", function() {
         break;
       }
     }
-  }
-  
-
-   if (loggedIn) {
-    alert("Login successful");
-  } else {
-    alert("Invalid email or password");
+    if (loggedIn) {
+      alert("Login successful");
+    } else {
+      alert("Invalid email or password");
+    }
   }
     });

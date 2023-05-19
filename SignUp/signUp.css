@@ -1,11 +1,15 @@
  #root{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #1A202C;
+    color: black;
     line-height: 1.5;
     background: #E2E8F0;
     transition-property: background-color;
     margin: 0%;
     padding: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 50;
+    background-image: url(http://yesofcorsa.com/wp-content/uploads/2015/08/1144_wine.jpg);
     font-family: 'PT Mono';
  }
  #main{
@@ -26,9 +30,10 @@
     text-align: center;
  }
  #form-div{
-   padding: 32px 40px 32px 40px;
+    padding: 32px 60px 32px 40px;
    background-color: #FFFFFF;
    border-radius: 4px;
+   background-color: rgba(0, 0, 0, 0.7);
    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
    /* display: flex; */
    justify-content: center;
@@ -50,6 +55,7 @@
     margin-bottom: 8px;
     font-weight: medium;
     font-size: 20px;
+    color: white;
  }
  #name{
     width: 100%;
@@ -112,12 +118,12 @@ img{
     font-size: 1rem;
     padding-inline-start: 1.5rem;
     padding-inline-end: 1.5rem;
-    background: #3182ce;
+    background: #BF0D12;
     color: white;
 }
 #signin{
     font-weight: bolder;
-    color: blue;
+    color: #BF0D12;
     text-decoration: underline;
 }
 #signin:hover{
@@ -126,3 +132,42 @@ img{
 #signUp-btn:hover{
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    #container {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    #form-div {
+      padding: 24px;
+    }
+  
+    #name,
+    #email,
+    #password {
+      height: 2rem;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    img {
+      max-height: 80px;
+      margin-bottom: 8px;
+    }
+  
+    #signUp-btn {
+      height: 2.5rem;
+      min-width: 2.5rem;
+      font-size: 0.9rem;
+      padding-inline-start: 1rem;
+      padding-inline-end: 1rem;
+    }
+  } 
+  
+  
+  
+  
+  
+  
