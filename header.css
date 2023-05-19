@@ -1,0 +1,64 @@
+#header{
+  font-family: 'PT Mono';
+  position: sticky;
+  top: 0;
+}
+
+#ua{
+  opacity: 0.6;
+}
+
+#navbar{
+    width: 100%;
+    padding-top: 0px;
+  }
+   #upper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    font-family: 'PT Mono';
+   }
+
+   #symbols{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2%;
+   }
+   a{
+    padding-left: 20px;
+    color: black;
+   }
+   .main-header{
+    display: flex;
+    align-items: center;
+}
+
+
+.header-options-div{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 15%;
+}
+
+.start-typing-to-search{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.start-typing-to-search input{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 45px;
+  border: none;
+  
+}
+
+.start-typing-to-search input:focus{
+  outline: none;
+}
+    
