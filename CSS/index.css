@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 
 .text{
     font-family: 'PT Mono';
@@ -85,7 +87,7 @@
 
 .wine img{
     width: 100%;
-    height: 350px;
+    /* height: 350px; */
     cursor: pointer;
 }
 /* Different Wines End */
@@ -401,6 +403,12 @@
 
 
 @media only screen and (max-width: 900px){
+    .slide img {
+        width: 100%;
+        height: 550px;
+        transition: 0.5s;
+    }
+
     #wine-category{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -436,6 +444,10 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
+    #wine-subscription-btn{
+        margin-bottom: 3%;
+    }
+
     #image-and-content{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -468,9 +480,44 @@
         border-bottom: 0;
         justify-content: space-around;
     }
+
+    #blogs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    #blogs div:nth-child(4){
+        display: none;
+    }
+
+    #blogs2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #blogs2 > div:nth-child(1){
+        display: none;
+    }
+
+    #instagram{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    #instagram div:nth-child(4){
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 800px){
+    .slide img {
+        width: 100%;
+        height: 500px;
+        transition: 0.5s;
+    }
+
     #wine-category{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -494,15 +541,81 @@
     #options-append div:nth-child(4){
         display: none;
     }
-}
 
-@media only screen and (max-width: 700px){
-    #options div:nth-child(4){
+    #blogs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    #blogs div:nth-child(3){
+        display: none;
+    }
+
+    #blogs div:nth-child(4){
+        display: none;
+    }
+
+    #instagram{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #instagram div:nth-child(3){
+        display: none;
+    }
+
+    #instagram div:nth-child(4){
         display: none;
     }
 }
 
+@media only screen and (max-width: 700px){
+    .slide img {
+        width: 100%;
+        height: 450px;
+        transition: 0.5s;
+    }
+
+    #options div:nth-child(4){
+        display: none;
+    }
+
+    #blogs{
+        display: none;
+    }
+
+    #blogs2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #blogs2 > div:nth-child(1){
+        display: none;
+    }
+
+    #final-two div:nth-child(2){
+        display: none;
+    }
+
+    #see-all-articles{
+        width: 100%;
+        padding-top: 45%;
+        margin-bottom: 20%;
+        color: white;
+        padding-left: 40px;
+        transition: 1.5s;
+    }
+    
+}
+
 @media only screen and (max-width: 500px){
+    .slide img {
+        width: 100%;
+        height: 350px;
+        transition: 0.5s;
+    }
     #options div:nth-child(3){
         display: none;
     }
