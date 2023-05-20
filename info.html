@@ -11,7 +11,7 @@
     <style>
         body{
             background-color: #fff8e9;
-            font-family: 'PT Mono', monospace; 
+            font-family: 'PT Mono'; 
         }
         #info{
             padding: 30px 80px;
@@ -53,10 +53,10 @@
             padding: 5px;
             border-radius: 3px;
         }
-        h1{
+        #h1{
             font-size: 40px;
         }
-        label{
+        #label{
             font-size: 20px;
         }
         #firstName,#lastName,#number,#email,#text{
@@ -65,7 +65,7 @@
             margin-bottom: 16px;
             width: 97%;
             border-radius: 3px;
-            border: 1px solid teal;
+            border: 1px solid #1e1e1e;
             font-size: 16px;
         }
         #details{
@@ -90,9 +90,7 @@
             color: whitesmoke;
             background-color: brown;
         }
-        .fa-solid{
-            margin-top: 20px;
-        }
+        
         
         #image img{
             width: 60%;
@@ -128,6 +126,18 @@
             display: flex;
             justify-content: space-between;
         }
+
+        input{
+            background: none;
+        }
+
+        input:active{
+            background: none;
+        }
+
+        #topLeft i{
+            margin-top: 23px;
+        }
         
     </style>
 </head>
@@ -137,7 +147,7 @@
     <div id="info">
         <div id="left">
             <div>
-                <h1>Checkout</h1>
+                <h1 id="h1">Checkout</h1>
             </div>
         <div id="topLeft">
             <h3>1.Information</h3>
@@ -158,11 +168,11 @@
                         <input type="text" id="lastName" placeholder="Enter Your Last Name">
                     </div>
                 </div>
-                <label for="">Phone number</label><br>
+                <label  id="label" for="">Phone number</label><br>
                 <input type="text" id="number" placeholder="Enter Phone Number"><br>
-                <label for="">Email address</label><br>
+                <label  id="label" for="">Email address</label><br>
                 <input type="text" placeholder="Enter Email Address" id="email"><br>
-                <label for="">Your message (optional)</label><br>
+                <label id="label"  for="">Your message (optional)</label><br>
                 <input type="text" id="text">
                 <button id="submit">Continue</button>
             </form>

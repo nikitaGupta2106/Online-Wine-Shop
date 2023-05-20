@@ -3,7 +3,7 @@ const navbar = () => {
     <div id="upper">
     <p id="content"><span id="ua">UA</span>|EN 0 800 123 456</p>
     <div id ="symbols">
-        <a class="logos" href="index.html"><i class="fa-regular fa-user"></i></i></a>
+        <a class="logos" href="./SignIn/signin.html"><i class="fa-regular fa-user"></i></i></a>
         <a class="logos" href="search.html"><i class="fa-solid fa-scale-unbalanced"></i></a>
         <a class="logos" href="index.html"><i class="fa-regular fa-heart"></i></a>
         <a class="logos" href="index.html"> <i class="fa-solid fa-bag-shopping"></i></a>
@@ -12,7 +12,7 @@ const navbar = () => {
 <hr id="hr">
 <div class="main-header">
     <div class="header-main-div">
-        <h2>Mine Wine</h2>
+        <h2 onclick="window.location.href='index.html';" style="cursor:pointer">Mine Wine</h2>
     </div>
     <div class="header-options-div">
         <a href="#"><p>RED</p></a>
