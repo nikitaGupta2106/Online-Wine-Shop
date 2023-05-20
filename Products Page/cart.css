@@ -37,11 +37,17 @@ body {
     
 }
 
-#quantityDiv button, input{
+#quantityDiv button{
     width: 20px;
     background-color: #fff8e9;
     border: none;
 }
+#input-area{
+    width: 20px;
+    background-color: #fff8e9;
+    border: none;
+}
+
 button{
     background-color: #fff8e9;
     border: none;
@@ -94,19 +100,19 @@ button:hover{
 /* -------------------------------------------------------------------------------------------media queries */
 @media only screen and (min-width: 701px) and (max-width:1000px) {
     #cart-div {
-        width: 80%;
+        width: 90%;
         margin: auto;
-        margin-top: 10%;
+        margin-top: 5%;
       }
 
 }
 @media only screen and (max-width:700px) {
   
     #cart-div {
-        width: 80%;
+        width: 90%;
         margin: auto;
         padding: 5px;
-        margin-top: 10%;
+        margin-top: 5%;
       }
       #display-div img{
         width: 80px;
@@ -117,7 +123,11 @@ button:hover{
         
         
     }
-    #quantityDiv button, input{
+    #quantityDiv button{
+        width: 8px;
+        background-color: #fff8e9;
+    }
+    #input-area{
         width: 8px;
         background-color: #fff8e9;
     }
