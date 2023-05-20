@@ -12,6 +12,9 @@
     background-image: url(http://yesofcorsa.com/wp-content/uploads/2015/08/1144_wine.jpg);
     font-family: 'PT Mono';
  }
+ #already{
+   color: white;
+ }
  #main{
     min-height: 100vh;
     padding-top: 48px;

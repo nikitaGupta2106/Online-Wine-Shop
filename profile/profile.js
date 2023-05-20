@@ -1,3 +1,11 @@
+const signOutBtn = document.getElementById("signout-btn");
+signOutBtn.addEventListener("click",()=>{
+      window.location.href="../SignUp/signUp.html"
+})
+
+
+
+
 const profile = document.getElementById("profile");
 profile.addEventListener("click",gotodetails);
 
@@ -72,7 +80,7 @@ let profileName=document.getElementById("username")
 if (Array.isArray(myData) && myData.length > 0) {
    
    usrname.textContent = myData[0].username;
-   // profileName.textContent= myData[0].username;
+   profileName.textContent= myData[0].username;
    console.log(usrname)
    
  } else {

@@ -2,7 +2,7 @@
     background-color: #fff8e9;
     font-family: 'PT Mono';
 }
-#main{
+#first{
     margin: 10px;
     padding: 10px;
    
@@ -10,7 +10,7 @@
 #points{
     color: green;
 }
-#head{
+#second{
     display: flex;
     justify-content: space-between ;
     border-bottom: 2px solid grey;
