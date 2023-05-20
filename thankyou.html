@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thankyou Page</title>
+    <style>
+        body{
+            background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+        }
+        #container{
+            display: flex;
+            padding: 120px 240px;
+            
+        }
+        img{
+            width: 400px;
+        }
+        #wish{
+            margin-left: 50px;
+            margin-top: 20px;
+            text-align: center;
+            
+        }
+        button{
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover{
+            scale: 1.1;
+            color: whitesmoke;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="image">
+            <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg" alt="">
+        </div>
+        <div id="wish">
+            <h2>Thank you for your purchase!</h2>
+            <p>Your old number is <span>3558</span></p>
+            <p>You can find details in a confirmation mail or your account</p>
+            <button id="btn">Continue shopping</button>
+        </div>
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click",()=>{
+            location.href = "index.html" //redirect to landing page
+        })
+    </script>
+</body>
+</html>

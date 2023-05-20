@@ -8,19 +8,18 @@
     <script src="https://kit.fontawesome.com/3e0c0ed060.js" crossorigin="anonymous"></script>
     <style>
         body{
-            background-color: rgb(253, 251, 240);
+            background-color: #fff8e9;
+            font-family: 'PT Mono', monospace; 
         }
         #info{
             padding: 30px 80px;
             display: flex;
         }
         #left{
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
             width: 57%;
             padding: 5px;
         }
         #right{
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
             width: 30%;
             margin-left: 8%;
             padding: 5px;
@@ -73,7 +72,7 @@
         #fullName input{
             width: 300px;
         }
-        button{
+        #submit{
             width: 100%;
             margin-top: 15px;
             padding: 10px;
@@ -84,7 +83,7 @@
             border-radius: 3px;
             cursor: pointer;
         }
-        button:hover{
+        #submit:hover{
             scale: 1.1;
             color: whitesmoke;
             background-color: brown;
@@ -99,14 +98,31 @@
             margin: auto;
             margin-top: 30px;
         }
-        #discountPrice{
-            text-decoration: line-through;
-        }
         #prices{
             display: flex;
             justify-content: space-between;
         }
         #total{
+            display: flex;
+            justify-content: space-between;
+        }
+        #promobtn{
+            width: 102%;
+            margin-top: -25px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: rgb(241, 89, 89);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #promobtn:hover{
+            scale: 1.1;
+            color: whitesmoke;
+            background-color: brown;
+        }
+        #promocode,#actualPromoAmt{
             display: flex;
             justify-content: space-between;
         }
@@ -121,9 +137,9 @@
         <div id="topLeft">
             <h3>1.Information</h3>
             <i class="fa-solid fa-arrow-right-long"></i>
-            <h3 style="color: cadetblue;">2.Delivery</h3>
-            <i class="fa-solid fa-arrow-right-long" style="color: cadetblue;"></i>
-            <h3 style="color: cadetblue;">3.Payment method</h3>
+            <h3 style="color: rgba(226, 220, 220, 0.945);">2.Delivery</h3>
+            <i class="fa-solid fa-arrow-right-long" style="color: rgba(226, 220, 220, 0.945);"></i>
+            <h3 style="color: rgba(226, 220, 220, 0.945);">3.Payment method</h3>
         </div>
         <div id="details">
             <form action="">
@@ -156,28 +172,10 @@
             <p>You earn 320 points on this purchase!</p>
             <hr>
             <div id="productDetails">
-                <!-- <div id="image">
-                    <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg" alt="">
-                </div>
-                <div id="">
-                    <h5>Château Margaux</h5>
-                    <p>year <span id="year">2019</span></p>
-                    <div id="prices">
-                        <h5><span id="discountPrice">2000  </span><span class="acctualPrice">1800</span></h5>
-                        <h5 class="acctualPrice">1800</h5>
-                    </div>
-                    <hr>
-                </div>
-                <div id="total">
-                    <h3>Total</h3>
-                    <h3>1800</h3>
-                </div> -->
             </div>
         </div>
     </div>
-    <script>
-
-        
+    <script> 
         let btn = document.getElementById("submit");
         btn.addEventListener("click",()=>{
             event.preventDefault();
@@ -185,87 +183,45 @@
             let lName = document.getElementById("lastName").value;
             let phone = document.getElementById("number").value;
             let email = document.getElementById("email").value;
-
             if(fName == "" || lName == "" || phone == "" || email == ""){
                 alert("Please Fill All Details")
             }else{
                 location.href = "deliveryPage.html"
-                console.log("sj")
             }
         })
 
-
-        // let cardArr = [
-        //     {
-        //         name:"blue berry wine",
-        //         year:2019,
-        //         price:2000,
-        //         url:"https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg"
-        //     },
-        //     {
-        //         name:"Dark blue berry wine",
-        //         year:2018,
-        //         price:2300,
-        //         url:"https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg"
-        //     },
-        //     {
-        //         name:"Light blue berry wine",
-        //         year:2012,
-        //         price:800,
-        //         url:"https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg"
-        //     }
-        // ]
-
-
-        // localStorage.setItem("card",JSON.stringify(cardArr))
-
-
-        let data = JSON.parse(localStorage.getItem("card")) || [];
-
-        // let totalPrice = (arr)=>{
-        //     let price;
-        //     arr.forEach(elm=>{
-        //         price = price + elm.price
-        //         console.log(price)
-        //     })
-        //     return price
-        // }
+        let data = JSON.parse(localStorage.getItem("cart")) || [];
         let container = document.getElementById("productDetails");
+        let sum = 0;
         let displayData = ()=>{
+            sum = 0;
             container.textContent = "";
-            let sum = 0;
             data.forEach(elm=>{
                 let image = document.createElement("div");
                 image.setAttribute("id","image")
                 let img = document.createElement("img");
-                img.src = elm.url
+                img.src = elm.image_url;
                 image.appendChild(img);
                 let div = document.createElement("div");
                 let name = document.createElement("h5");
                 name.textContent = elm.name;
-                let paraYear = document.createElement("p");
-                paraYear.textContent = "Year "
-                let year = document.createElement("span");
-                year.setAttribute("id","year");
-                year.textContent=elm.year;
-                paraYear.appendChild(year);
                 let price = document.createElement("div");
                 price.setAttribute("id","prices");
                 let h5 = document.createElement("h5");
                 let discountPrice = document.createElement("span");
-                discountPrice.setAttribute("id","discountPrice");
-                discountPrice.textContent = "₹ "+(elm.price+180);
+                discountPrice.setAttribute("id","quantity");
+                discountPrice.textContent = "Qty";
                 let acctualPrice = document.createElement("span");
-                acctualPrice.setAttribute("class","acctualPrice");
-                acctualPrice.textContent = " "+" "+"₹ "+elm.price;
+                acctualPrice.setAttribute("class","qty");
+                acctualPrice.textContent = `(${elm.qty} * ${elm.price})`
                 h5.append(discountPrice,acctualPrice);
                 let mainAcctualPrice = document.createElement("h5");
                 mainAcctualPrice.setAttribute("class","acctualPrice");
-                mainAcctualPrice.textContent = "₹ "+elm.price
-                sum = sum+elm.price;
+                mainAcctualPrice.textContent = "$ "+(elm.price*elm.qty)
+                sum = sum+(elm.price*elm.qty);
                 price.append(h5,mainAcctualPrice);
                 let hr = document.createElement("hr");
-                div.append(name,paraYear,price,hr);
+                div.append(name,price,hr);
                 container.append(image,div)
 
             });
@@ -282,12 +238,6 @@
                 // console.log(totalPri)
         }
         displayData()
-        
     </script>
 </body>
 </html>
-<!-- let total = document.createElement("div");
-                total.setAttribute("id","total")
-                let totalH3 = document.createElement("h3");
-                totalH3.textContent = "Total";
-                let totalAmount = document.createElement("h3"); -->

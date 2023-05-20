@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery Page</title>
+    <title>Payment Page</title>
     <script src="https://kit.fontawesome.com/3e0c0ed060.js" crossorigin="anonymous"></script>
     <style>
         body{
             background-color: #fff8e9;
-            font-family: 'PT Mono', monospace;
+    font-family: 'PT Mono', monospace;
         }
         #info{
             padding: 30px 80px;
             display: flex;
         }
         #left{
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
             width: 57%;
             padding: 5px;
         }
         #right{
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
             width: 30%;
             margin-left: 8%;
             padding: 5px;
@@ -55,23 +57,13 @@
             font-size: 40px;
         }
         label{
-            font-size: 20px;
+            font-size: 17px;
         }
-        input{
-            padding: 12px 8px;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            width: 97%;
-            border-radius: 3px;
-            border: 1px solid teal;
-            font-size: 16px;
-        }
+       
         #details{
             margin-top: 30px;
         }
-        #fullName input{
-            width: 300px;
-        }
+
         button{
             width: 100%;
             margin-top: 15px;
@@ -109,6 +101,31 @@
             display: flex;
             justify-content: space-between;
         }
+        #promobtn{
+            width: 102%;
+            margin-top: -25px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: rgb(241, 89, 89);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #promobtn:hover{
+            scale: 1.1;
+            color: whitesmoke;
+            background-color: brown;
+        }
+        #promocode,#actualPromoAmt{
+            display: flex;
+            justify-content: space-between;
+        }
+        #promo{
+            padding: 10px;
+            margin-top: 15px;
+            width: 95.5%;
+        }
     </style>
 </head>
 <body>
@@ -121,19 +138,16 @@
             <h3>1.Information</h3>
             <i class="fa-solid fa-arrow-right-long"></i>
             <h3>2.Delivery</h3>
-            <i class="fa-solid fa-arrow-right-long"style="color: rgba(226, 220, 220, 0.945);"></i>
-            <h3 style="color: rgba(226, 220, 220, 0.945);">3.Payment method</h3>
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <h3 >3.Payment method</h3>
         </div>
         <div id="details">
             <form action="">
-                <label for="">Shipping Method</label><br>
-                <input type="text" id="sm"><br>
-                <label for="">City</label><br>
-                <input type="text" id="city"><br>
-                <label for="">Post Office</label><br>
-                <input type="text" name="" id="po"><br><br>
-                <label for="">Mon-Fri 09:00-18:00</label><br>
-                <label for="">Sat-Sun 09:00-15:00</label>
+               <br><hr><br>
+               <input type="checkbox">
+               <label for="">Online Payment Upon Delivery</label><br><br><hr><br>
+               <input type="checkbox">
+               <label for="">Cash On Delivery</label><br><br><br>
                 <button id="submit">Continue</button>
             </form>
         </div>
@@ -147,49 +161,36 @@
             <p>You earn 320 points on this purchase!</p>
             <hr>
             <div id="productDetails">
-                <div id="image">
-                    <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg" alt="">
-                </div>
-                <div id="">
-                    <h5>Château Margaux</h5>
-                    <p>year <span id="year">2019</span></p>
-                    <div id="prices">
-                        <h5><span id="discountPrice">2000  </span><span class="acctualPrice">1800</span></h5>
-                        <h5 class="acctualPrice">1800</h5>
-                    </div>
-                    <hr>
-                </div>
-                <div id="total">
-                    <h3>Total</h3>
-                    <h3></h3>
-                </div>
+            </div>
+            <label for="">Apply Promocode</label><br>
+            <input type="text" id="promo" placeholder="Apply Promocode">
+            <h4 id="promoAmount"></h4>
+            <button id="promobtn">Apply</button>
+            <div id="promocode">
+                <h4 id="LP"></h4>
+                <h4 id="promoAmt"><span></span></h4>
+            </div>
+            <hr>
+            <div id="actualPromoAmt">
+                <h4 id="FA"></h4>
+                <h4 id="promoAmtFinal"></h4>
             </div>
         </div>
     </div>
 
     <script>
-
         let btn = document.getElementById("submit");
         btn.addEventListener("click",()=>{
             event.preventDefault()
-            let shippingMethod = document.getElementById("sm").value;
-            let cityName = document.getElementById("city").value;
-            let PostOffice = document.getElementById("po").value;
-
-            if(shippingMethod == "" || cityName == "" || PostOffice == ""){
-                alert("Please Fill All Details")
-            }else{
-                location.href = "payment.html"
-            }
+            location.href = "thankyou.html"
         })
 
-
         let data = JSON.parse(localStorage.getItem("cart")) || [];
-
         let container = document.getElementById("productDetails");
+        let sum = 0;
         let displayData = ()=>{
+            sum = 0;
             container.textContent = "";
-            let sum = 0;
             data.forEach(elm=>{
                 let image = document.createElement("div");
                 image.setAttribute("id","image")
@@ -204,7 +205,7 @@
                 let h5 = document.createElement("h5");
                 let discountPrice = document.createElement("span");
                 discountPrice.setAttribute("id","quantity");
-                discountPrice.textContent = "Qty";
+                discountPrice.textContent = "Qty ";
                 let acctualPrice = document.createElement("span");
                 acctualPrice.setAttribute("class","qty");
                 acctualPrice.textContent = `(${elm.qty} * ${elm.price})`
@@ -219,7 +220,6 @@
                 container.append(image,div)
 
             });
-
                 let total = document.createElement("div");
                 total.setAttribute("id","total")
                 let totalH3 = document.createElement("h3");
@@ -230,8 +230,23 @@
                 container.append(total);
         }
         displayData()
-        
+        let promobtn = document.getElementById("promobtn");
+        promobtn.addEventListener("click",()=>{
+            promofun()
+        })
+
+        let promofun = ()=>{
+            let promo = document.getElementById("promo").value;
+            if(promo == "wine10"){
+                document.getElementById("LP").textContent = "Less Promo"
+                document.getElementById("promoAmt").textContent ="-"+ (sum*10/100)
+                document.getElementById("FA").textContent = "Final Amount"
+                let val = document.getElementById("promoAmtFinal").textContent = sum - (sum*10/100)
+                console.log(val)
+            }
+        }
     </script>
+
 
 </body>
 </html>
