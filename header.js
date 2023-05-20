@@ -9,25 +9,34 @@ const navbar = () => {
         <a class="logos" href="index.html"> <i class="fa-solid fa-bag-shopping"></i></a>
     </div> 
   </div>
-<hr>
+<hr id="hr">
 <div class="main-header">
     <div class="header-main-div">
-        <h3>Mine Wine</h3>
+        <h2>Mine Wine</h2>
     </div>
     <div class="header-options-div">
-        <p>RED</p>
-        <p>WHITE</p>
-        <p>ROSE</p>
-        <p>SPARKLING</p>
-        <p>PROMOTIONS</p>
-        <p>SETS & GIFTS</p>
+        <a href="#"><p>RED</p></a>
+        <a href="#"><p>WHITE</p></a>
+        <a href="#"><p>ROSE</p></a>
+        <a href="#"><p>SPARKLING</p></a>
+        <a href="#"><p>PROMOTIONS</p></a>
+        <a href="#"><p>SETS & GIFTS</p></a>
     </div>
     <div class="start-typing-to-search">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="TYPE TO SEARCH ...">
     </div>
 </div>
-<hr> `
+<hr id="hr">
+<div class="header-options-div-two">
+    <a href="#"><p>RED</p></a>
+    <a href="#"><p>WHITE</p></a>
+    <a href="#"><p>ROSE</p></a>
+    <a href="#"><p>SPARKLING</p></a>
+    <a href="#"><p>PROMOTIONS</p></a>
+    <a href="#"><p>SETS & GIFTS</p></a>
+</div>
+<hr id="hr" class="invisible-hr">
+ `
   }
-  
 export default navbar
