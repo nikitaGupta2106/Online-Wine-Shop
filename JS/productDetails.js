@@ -149,7 +149,7 @@ function displayData(data) {
         img.src = wine.image_url;
         img.addEventListener("click", () => {
             localStorage.setItem("details", JSON.stringify(wine));
-            window.location.href = "productDetails.html"
+            window.location.href = "./productDetails.html"
         })
         let name = document.createElement("h4");
         name.innerText = wine.name;
@@ -243,12 +243,12 @@ quickOrderDiv
 let quickOrderBtn= document.getElementById("quickOrderDiv");
 quickOrderBtn.addEventListener("click", ()=>{
     addToCart(product);
-    window.location.href="cart.html"
+    window.location.href="./cart.html"
 })
 
 // --------------------------------------------------------------------------------view all button
 
 let viewAll= document.getElementById("viewAllBtn");
 viewAll.addEventListener("click", ()=>{
-    window.location.href="../products.html"
+    window.location.href="./products.html"
 })

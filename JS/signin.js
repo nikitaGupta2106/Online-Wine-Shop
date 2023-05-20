@@ -10,7 +10,7 @@ passwordcheckbox.addEventListener("change", function() {
 
   document.getElementById("signup").addEventListener("click",gotosignup);
   function gotosignup(){
-    window.location.href="../SignUp/signUp.html"
+    window.location.href="./signUp.html"
   }
 
   const form = document.querySelector("form");

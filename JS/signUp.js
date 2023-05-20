@@ -41,7 +41,7 @@ passwordcheckbox.addEventListener("change", function() {
     }
 
     alert("signup successfull");
-    window.location.href="../SignIn/signin.html"
+    window.location.href="./signin.html"
     resetForm();
   }
 
@@ -53,5 +53,5 @@ passwordcheckbox.addEventListener("change", function() {
 
   document.getElementById("signin").addEventListener("click",gotosignin);
   function gotosignin(){
-    window.location.href="../SignIn/signin.html"
+    window.location.href="./signin.html"
   }

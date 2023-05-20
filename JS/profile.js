@@ -1,15 +1,23 @@
+const signOutBtn = document.getElementById("signout-btn");
+signOutBtn.addEventListener("click",()=>{
+      window.location.href="./signUp.html"
+})
+
+
+
+
 const profile = document.getElementById("profile");
 profile.addEventListener("click",gotodetails);
 
 function gotodetails(){
-   window.location.href="profile.html"
+   window.location.href="./profile.html"
 }
 
 const myorders = document.getElementById("myorders");
 myorders.addEventListener("click",gotoorders);
 
 function gotoorders(){
-   window.location.href="Myorders.html"
+   window.location.href="./Myorders.html"
 }
 
 const wines = document.getElementById('wines');
@@ -72,7 +80,7 @@ let profileName=document.getElementById("username")
 if (Array.isArray(myData) && myData.length > 0) {
    
    usrname.textContent = myData[0].username;
-   // profileName.textContent= myData[0].username;
+   profileName.textContent= myData[0].username;
    console.log(usrname)
    
  } else {
@@ -82,5 +90,5 @@ if (Array.isArray(myData) && myData.length > 0) {
  let wishlist=document.getElementById("wishlist");
  wishlist.addEventListener("click",gotowishlist);
  function gotowishlist(){
-   window.location.href="wishlist.html";
+   window.location.href="./wishlist.html";
  }
