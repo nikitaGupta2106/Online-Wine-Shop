@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thankyou Page</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
     <style>
         body{
             background-color: #fff8e9;
@@ -42,6 +44,7 @@
         }
     </style>
 </head>
+<header id="header"></header>
 <body>
     <div id="container">
         <div id="image">
@@ -57,8 +60,10 @@
     <script>
         let btn = document.getElementById("btn");
         btn.addEventListener("click",()=>{
-            location.href = "index.html" //redirect to landing page
+            location.href = "index.html" 
         })
     </script>
 </body>
+<footer id="footer"></footer>
+<script src="importedHeader.js" type="module"></script>
 </html>
