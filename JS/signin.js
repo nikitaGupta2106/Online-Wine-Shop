@@ -37,7 +37,8 @@ passwordcheckbox.addEventListener("change", function() {
       }
     }
     if (loggedIn) {
-      alert("Login successful");
+      alert("Login successful" );
+      location.href = "./index.html";
     } else {
       alert("Invalid email or password");
     }
