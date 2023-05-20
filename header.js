@@ -4,23 +4,23 @@ const navbar = () => {
     <p id="content"><span id="ua">UA</span>|EN 0 800 123 456</p>
     <div id ="symbols">
         <a class="logos" href="./SignIn/signin.html"><i class="fa-regular fa-user"></i></i></a>
-        <a class="logos" href="search.html"><i class="fa-solid fa-scale-unbalanced"></i></a>
-        <a class="logos" href="index.html"><i class="fa-regular fa-heart"></i></a>
-        <a class="logos" href="index.html"> <i class="fa-solid fa-bag-shopping"></i></a>
+        <a class="logos" href="./search.html"><i class="fa-solid fa-scale-unbalanced"></i></a>
+        <a class="logos" href="../Products Page/wishlist.html"><i class="fa-regular fa-heart"></i></a>
+        <a class="logos" href="../Products Page/cart.html"> <i class="fa-solid fa-bag-shopping"></i></a>
     </div> 
   </div>
 <hr id="hr">
 <div class="main-header">
     <div class="header-main-div">
-        <h2 onclick="window.location.href='index.html';" style="cursor:pointer">Mine Wine</h2>
+        <h2 onclick="window.location.href='../index.html';" style="cursor:pointer">Mine Wine</h2>
     </div>
     <div class="header-options-div">
-        <a href="#"><p>RED</p></a>
-        <a href="#"><p>WHITE</p></a>
-        <a href="#"><p>ROSE</p></a>
-        <a href="#"><p>SPARKLING</p></a>
-        <a href="#"><p>PROMOTIONS</p></a>
-        <a href="#"><p>SETS & GIFTS</p></a>
+        <a href="./Products Page/products.html"><p>RED</p></a>
+        <a href="./Products Page/products.html"><p>WHITE</p></a>
+        <a href="./Products Page/products.html"><p>ROSE</p></a>
+        <a href="./Products Page/products.html"><p>SPARKLING</p></a>
+        <a href="./Products Page/products.html"><p>PROMOTIONS</p></a>
+        <a href="./Products Page/products.html"><p>SETS & GIFTS</p></a>
     </div>
     <div class="start-typing-to-search">
         <i class="fa-solid fa-magnifying-glass"></i>

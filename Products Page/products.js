@@ -58,7 +58,7 @@ function displayData(data) {
             img.src = wine.image_url;
             img.addEventListener("click", () => {
                 localStorage.setItem("details", JSON.stringify(wine));
-                window.location.href = "./Product Details/productDetails.html"
+                window.location.href = "productDetails.html"
             })
             let name = document.createElement("h4");
             name.innerText = wine.name;

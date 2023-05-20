@@ -110,8 +110,9 @@ document.getElementById("checkoutBtn").addEventListener("click", () => {
 
 function totalPriceShow(){
     let arr= JSON.parse(localStorage.getItem("cart")) || [];
-    let sum= arr.reduce((ac, elem)=>{
-        return ac+ Number(elem.price * elem.qty);
+    let sum = arr.reduce((ac, elem)=>{
+        return Number(ac) + Number(elem.price * elem.qty);
+        console.log(ac, elem);
     },0)
     console.log(sum);
     
