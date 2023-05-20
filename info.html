@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <script src="https://kit.fontawesome.com/3e0c0ed060.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body{
+            background-color: #fff8e9;
+            font-family: 'PT Mono', monospace; 
+        }
+        #info{
+            padding: 30px 80px;
+            display: flex;
+        }
+        #left{
+            width: 57%;
+            padding: 5px;
+        }
+        #right{
+            width: 30%;
+            margin-left: 8%;
+            padding: 5px;
+        }
+        #topLeft{
+            display: flex;
+            justify-content: space-between;
+        }
+        #fullName{
+            display: flex;
+            justify-content: space-between;
+        }
+        #right{
+
+            padding: 0px 20px;
+        }
+        #topRight{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 90px;
+        }
+        #topRight p{
+            color: cadetblue;
+            margin-top: 25px;
+        }
+        #freeShopping{
+            text-align: center;
+            border: 2px solid rgb(154, 241, 198);
+            padding: 5px;
+            border-radius: 3px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        label{
+            font-size: 20px;
+        }
+        #firstName,#lastName,#number,#email,#text{
+            padding: 12px 8px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            width: 97%;
+            border-radius: 3px;
+            border: 1px solid teal;
+            font-size: 16px;
+        }
+        #details{
+            margin-top: 30px;
+        }
+        #fullName input{
+            width: 300px;
+        }
+        #submit{
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #submit:hover{
+            scale: 1.1;
+            color: whitesmoke;
+            background-color: brown;
+        }
+        .fa-solid{
+            margin-top: 20px;
+        }
+        
+        #image img{
+            width: 60%;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #prices{
+            display: flex;
+            justify-content: space-between;
+        }
+        #total{
+            display: flex;
+            justify-content: space-between;
+        }
+        #promobtn{
+            width: 102%;
+            margin-top: -25px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: rgb(241, 89, 89);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #promobtn:hover{
+            scale: 1.1;
+            color: whitesmoke;
+            background-color: brown;
+        }
+        #promocode,#actualPromoAmt{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+    </style>
+</head>
+<header id="header"></header>
+<body>
+    
+    <div id="info">
+        <div id="left">
+            <div>
+                <h1>Checkout</h1>
+            </div>
+        <div id="topLeft">
+            <h3>1.Information</h3>
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <h3 style="opacity: 0.4;">2.Delivery</h3>
+            <i class="fa-solid fa-arrow-right-long" style="opacity: 0.4;"></i>
+            <h3 style="opacity: 0.4;">3.Payment method</h3>
+        </div>
+        <div id="details">
+            <form action="">
+                <div id="fullName">
+                    <div id="fName">
+                        <label for="">First name</label><br>
+                        <input type="text" name="" id="firstName" placeholder="Enter Your First Name">
+                    </div>
+                    <div id="lName">
+                        <label for="">Last name</label><br>
+                        <input type="text" id="lastName" placeholder="Enter Your Last Name">
+                    </div>
+                </div>
+                <label for="">Phone number</label><br>
+                <input type="text" id="number" placeholder="Enter Phone Number"><br>
+                <label for="">Email address</label><br>
+                <input type="text" placeholder="Enter Email Address" id="email"><br>
+                <label for="">Your message (optional)</label><br>
+                <input type="text" id="text">
+                <button id="submit">Continue</button>
+            </form>
+        </div>
+        </div>
+        <div id="right">
+            <div id="topRight">
+                <h2>Your Order</h2>
+                <p>Edit</p>
+            </div>
+            <p id="freeShopping">You're getting free shopping!</p>
+            <p>You earn 320 points on this purchase!</p>
+            <hr>
+            <div id="productDetails">
+            </div>
+        </div>
+    </div>
+    <script> 
+        let btn = document.getElementById("submit");
+        btn.addEventListener("click",()=>{
+            event.preventDefault();
+            let fName = document.getElementById("firstName").value;
+            let lName = document.getElementById("lastName").value;
+            let phone = document.getElementById("number").value;
+            let email = document.getElementById("email").value;
+            if(fName == "" || lName == "" || phone == "" || email == ""){
+                alert("Please Fill All Details")
+            }else{
+                location.href = "deliveryPage.html"
+            }
+        })
+
+        let data = JSON.parse(localStorage.getItem("cart")) || [];
+        let container = document.getElementById("productDetails");
+        let sum = 0;
+        let displayData = ()=>{
+            sum = 0;
+            container.textContent = "";
+            data.forEach(elm=>{
+                let image = document.createElement("div");
+                image.setAttribute("id","image")
+                let img = document.createElement("img");
+                img.src = elm.image_url;
+                image.appendChild(img);
+                let div = document.createElement("div");
+                let name = document.createElement("h5");
+                name.textContent = elm.name;
+                let price = document.createElement("div");
+                price.setAttribute("id","prices");
+                let h5 = document.createElement("h5");
+                let discountPrice = document.createElement("span");
+                discountPrice.setAttribute("id","quantity");
+                discountPrice.textContent = "Qty";
+                let acctualPrice = document.createElement("span");
+                acctualPrice.setAttribute("class","qty");
+                acctualPrice.textContent = `(${elm.qty} * ${elm.price})`
+                h5.append(discountPrice,acctualPrice);
+                let mainAcctualPrice = document.createElement("h5");
+                mainAcctualPrice.setAttribute("class","acctualPrice");
+                mainAcctualPrice.textContent = "$ "+(elm.price*elm.qty)
+                sum = sum+(elm.price*elm.qty);
+                price.append(h5,mainAcctualPrice);
+                let hr = document.createElement("hr");
+                div.append(name,price,hr);
+                container.append(image,div)
+
+            });
+
+                // let totalPri = totalPrice(data);
+                let total = document.createElement("div");
+                total.setAttribute("id","total")
+                let totalH3 = document.createElement("h3");
+                totalH3.textContent = "Total";
+                let totalAmount = document.createElement("h3");
+                totalAmount.textContent = sum;
+                total.append(totalH3,totalAmount);
+                container.append(total);
+                // console.log(totalPri)
+        }
+        displayData()
+    </script>
+</body>
+<footer id="footer"></footer>
+<script src="importedHeader.js" type="module"></script>
+</html>
