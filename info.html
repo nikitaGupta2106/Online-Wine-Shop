@@ -142,6 +142,10 @@
         #topLeft i{
             margin-top: 23px;
         }
+
+        #star{
+            color: #bf0d12;
+        }
         
     </style>
 </head>
@@ -164,17 +168,17 @@
             <form action="">
                 <div id="fullName">
                     <div id="fName">
-                        <label for="">First name</label><br>
+                        <label for="">First name<span id="star">*</span> </label><br>
                         <input type="text" name="" id="firstName" placeholder="Enter Your First Name">
                     </div>
                     <div id="lName">
-                        <label for="">Last name</label><br>
+                        <label for="">Last name<span id="star">*</span></label><br>
                         <input type="text" id="lastName" placeholder="Enter Your Last Name">
                     </div>
                 </div>
-                <label  id="label" for="">Phone number</label><br>
+                <label  id="label" for="">Phone number<span id="star">*</span></label><br>
                 <input type="text" id="number" placeholder="Enter Phone Number"><br>
-                <label  id="label" for="">Email address</label><br>
+                <label  id="label" for="">Email address<span id="star">*</span></label><br>
                 <input type="text" placeholder="Enter Email Address" id="email"><br>
                 <label id="label"  for="">Your message (optional)</label><br>
                 <input type="text" id="text">

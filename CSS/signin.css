@@ -131,3 +131,7 @@ img{
 #signin-btn:hover{
    cursor: pointer;
 }
+
+#show-password{
+   color: #fff8e9;
+}

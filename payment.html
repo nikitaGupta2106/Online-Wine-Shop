@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Page</title>
     <script src="https://kit.fontawesome.com/3e0c0ed060.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Mono" />
+    <script src="https://kit.fontawesome.com/b7836bba55.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./CSS/footer.css">
+    
     <style>
         body{
             background-color: #fff8e9;
@@ -71,16 +76,17 @@
             margin-top: 15px;
             padding: 10px;
             font-size: 20px;
-            background-color: red;
-            color: white;
+            background-color: #bf0d12;
+            color: #fff8e9;
             border: none;
             border-radius: 3px;
             cursor: pointer;
+            transition: 0.5s;
         }
         button:hover{
             scale: 1.1;
-            color: whitesmoke;
-            background-color: brown;
+            transition: 0.5s;
+            color: #fff8e9;
         }
         .fa-solid{
             margin-top: 20px;
@@ -108,16 +114,17 @@
             margin-top: -25px;
             padding: 10px;
             font-size: 20px;
-            background-color: rgb(241, 89, 89);
+            background-color: #bf0d12;
             color: white;
             border: none;
             border-radius: 3px;
             cursor: pointer;
+            transition: 0.5s;
         }
         #promobtn:hover{
             scale: 1.1;
-            color: whitesmoke;
-            background-color: brown;
+            transition: 0.5s;
+            color: #fff8e9;
         }
         #promocode,#actualPromoAmt{
             display: flex;
@@ -127,6 +134,9 @@
             padding: 10px;
             margin-top: 15px;
             width: 95.5%;
+            background-color: #fff8e9;
+            border: 1px solid grey;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -147,10 +157,10 @@
         <div id="details">
             <form action="">
                <br><hr><br>
-               <input type="checkbox">
-               <label for="">Online Payment Upon Delivery</label><br><br><hr><br>
-               <input type="checkbox">
-               <label for="">Cash On Delivery</label><br><br><br>
+               <input type="checkbox" id="online" onclick="check1()">
+               <label for="" >Online Payment Upon Delivery</label><br><br><hr><br>
+               <input type="checkbox" id="cod" onclick="check2()">
+               <label for="" >Cash On Delivery</label><br><br><br>
                 <button id="submit">Continue</button>
             </form>
         </div>
@@ -160,7 +170,7 @@
                 <h2>Your Order</h2>
                 <p>Edit</p>
             </div>
-            <p id="freeShopping">You're getting free shopping!</p>
+            <p id="freeShopping">You're getting free shipping!</p>
             <p>You earn 320 points on this purchase!</p>
             <hr>
             <div id="productDetails">
@@ -182,10 +192,28 @@
     </div>
 
     <script>
+
+        let online = document.getElementById("online");
+        online.checked = true;
+        let cod = document.getElementById("cod");
+
+        const check1 = () =>{
+            cod.checked = false;
+        }
+
+        const check2 = () => {
+            online.checked = false;
+        }
+
         let btn = document.getElementById("submit");
         btn.addEventListener("click",()=>{
             event.preventDefault()
-            location.href = "thankyou.html"
+            if(online.checked){
+                location.href = "payment2.html";
+            }
+            else{
+                location.href = "thankyou.html"
+            }
         })
 
         let data = JSON.parse(localStorage.getItem("cart")) || [];

@@ -35,22 +35,12 @@
    border-radius: 4px;
    background-color: rgba(0, 0, 0, 0.7);
    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-   /* display: flex; */
    justify-content: center;
    align-items: center;
  }
- /* #inside-form{
-    display: flex;
-    flex-direction: column;
- } */
- /* #inside-form div{
-    width: 100%;
-    position: relative;
- } */
  #label1{
     display: block;
     text-align: start;
-    /* font-size: 1rem; */
     margin-right: 12px;
     margin-bottom: 8px;
     font-weight: medium;
@@ -131,6 +121,9 @@ img{
 }
 #signUp-btn:hover{
     cursor: pointer;
+}
+#show-password{
+   color: #fff8e9;
 }
 @media (max-width: 768px) {
     #container {

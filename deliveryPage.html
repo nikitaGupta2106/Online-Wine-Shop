@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delivery Page</title>
     <script src="https://kit.fontawesome.com/3e0c0ed060.js" crossorigin="anonymous"></script>    
+    
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./CSS/footer.css">
     <style>
@@ -112,6 +113,9 @@
             display: flex;
             justify-content: space-between;
         }
+        #star{
+            color: #bf0d12;
+        }
     </style>
 </head>
 <header id="header"></header>
@@ -130,12 +134,12 @@
         </div>
         <div id="details">
             <form action="">
-                <label for="">Shipping Method</label><br>
-                <input type="text" id="sm"><br>
-                <label for="">City</label><br>
-                <input type="text" id="city"><br>
-                <label for="">Post Office</label><br>
-                <input type="text" name="" id="po"><br><br>
+                <label for="">Shipping Method<span id="star">*</span></label><br>
+                <input type="text" id="sm" value="COD"><br>
+                <label for="">City<span id="star">*</span></label><br>
+                <input type="text" id="city" placeholder="city...."><br>
+                <label for="">Post Office<span id="star">*</span></label><br>
+                <input type="text" name="" id="po" placeholder="post office...."><br><br>
                 <label for="">Mon-Fri 09:00-18:00</label><br>
                 <label for="">Sat-Sun 09:00-15:00</label>
                 <button id="submit">Continue</button>

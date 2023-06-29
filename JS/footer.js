@@ -46,7 +46,7 @@ const footer = () => {
             <h1 id="subscribe-to-our-newsletter">Subscribe to our newsletter</h1>
             <p style="font-size: 10px;">And get-20% on your first order</p>
             <div id="send-mail">
-                <input type="exampe" id="example" class="newsletter-mail-input" name="example" placeholder="example@gmail.com">
+                <input type="email" id="example" class="newsletter-mail-input" name="example" placeholder="example@gmail.com">
                 <p id="get-mail">&#10230;</p>
                 <div id="mail-submission-success-overlay">
             <div id="success-msg-div">
