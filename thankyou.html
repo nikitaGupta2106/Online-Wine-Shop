@@ -65,6 +65,9 @@
     <script>
         let btn = document.getElementById("btn");
         btn.addEventListener("click",()=>{
+            let cartItems = JSON.parse(localStorage.getItem("cart"));
+            cartItems = [];
+            localStorage.setItem("cart",JSON.stringify(cartItems));
             location.href = "index.html" 
         })
 
