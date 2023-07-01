@@ -1,5 +1,5 @@
 # Online-Wine-Shop
-Deployed Link: https://minewinebynikitagupta.netlify.app/
+Deployed url: https://minewinebynikitagupta.netlify.app/
 
 Kamlesh Bhatt -> Home Page <br/>
 Nikita Gupta -> Products Page <br/>
